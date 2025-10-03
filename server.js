@@ -23,7 +23,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
   origin:[ process.env.FRONTEND_URL || "http://localhost:5173",
-          "https://sbsauto.ca/"
+          "https://sbsauto.ca"
           ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-type", "Authorization"]
