@@ -12,7 +12,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (username === ADMIN_USER && password === ADMIN_PASS) {
-    const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '8h' });
+    const token = jwt.sign({ username, isadmin:true }, JWT_SECRET, { expiresIn: '8h' });
     return res.json({ ok: true, token });
   }
   return res.status(401).json({ ok: false, message: 'Invalid credentials' });
