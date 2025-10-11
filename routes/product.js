@@ -85,7 +85,7 @@ router.post(
   "/",
   verifyToken,
   requireAdmin,
-  upload.fields([{ name: "mainImage", maxCount: 1 }, { name: "gallery", maxCount: 10 }]),
+  upload.fields([{ name: "mainImage", maxCount: 1 }, { name: "gallery", maxCount: 20 }]),
   async (req, res) => {
     try {
       const body = req.body.data ? JSON.parse(req.body.data) : req.body;
