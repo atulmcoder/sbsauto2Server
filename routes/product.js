@@ -120,7 +120,7 @@ router.put(
   "/:id",
   verifyToken,
   requireAdmin,
-  upload.fields([{ name: "mainImage", maxCount: 1 }, { name: "gallery", maxCount: 10 }]),
+  upload.fields([{ name: "mainImage", maxCount: 1 }, { name: "gallery", maxCount: 20 }]),
   async (req, res) => {
     try {
       const p = await Product.findById(req.params.id);
