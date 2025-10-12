@@ -19,7 +19,7 @@ const ProductSchema = new mongoose.Schema({
   odometer: { type: Number },
   hwy_l100km: { type: Number },
   city_l100km: { type: Number },
-    carfax_url: { type:  String },
+    carfex_url: { type:  String },
   price: { type: Number, default: 0 },
   description: { type: String, trim: true },
   hwy: { type: String, trim: true },
